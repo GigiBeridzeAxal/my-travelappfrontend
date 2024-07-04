@@ -12,13 +12,13 @@ export default function page() {
       <div className="menubar">
         <div className="panellogo">
           <img width={70} src="mainlogo.png" alt="" />
-          <div className="mainlogotext"><div className="pulse text-white">Pulse</div><div className="travel text-gray-300">Panel</div></div>
+          <div className="mainlogotext"><div className="pulse text-white">Pulse</div><div className="travel text-gray-300">Panel</div> </div>
         </div>
         <br /><br />
           
           <div className="sections">
           <a onClick={() => setselectedsection('turebi')} className="tours">
-            <img width={35} src="Eiffel.png" alt="" /> <div className="tourstittle">ტურები</div>
+            <img width={35} src="Eiffel.png" alt="" /> <div className="tourstittle">ტურები {selectedsection == 'turebi' ? <div className="greenlight bg-emerald-500"></div> : <div></div>} </div> 
           </a>
           </div>
       </div>

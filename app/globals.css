@@ -69,15 +69,16 @@ form{
     border-radius: 3px;
 }
 .tours input{
-    width: 800px;
+    width: 750px;
     padding: 20px;
     background-color: black;
     color: white;
-    border-radius: 3px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
 }
 .tours{
     display: flex;
-    gap: 3px;
+    gap: 5px;
     flex-direction: column;
 }
 .tourstittle{
@@ -109,5 +110,33 @@ form{
     justify-content: center;
     cursor: pointer;
     transition: 0.5s;
+
+}
+.greenlight{
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    box-shadow: 1px 1px 31px 10px #10b981;
+    transition: 0.5s;
+}
+.tours select{
+    padding: 20px;
+    background-color: black;
+    color: white;
+}
+.panelinputdiv{
+    display: flex;
+}
+.panelinputdiv img{
+  width: 40px;
+  height: 40px;
+
+}
+.cover{
+    background-color: black;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
 }
