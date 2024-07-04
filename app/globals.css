@@ -2,32 +2,112 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.menubar{
+
+    height: 100vh;
+    width: 300px;
+    background-color: black;
+
+}
+.panellogo{
+    padding: 10px;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pulse{
+    font-size: 19px;
+    height: 20px;
+}
+.mainlogotext{
+ height: 55px;
+ padding: 5px;   
+
+
+}
+.travel{
+    font-size: 14px;
+}
+.sections{
+    color: white;
+
+}
+.sections a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    font-size: 22px;
+    border-bottom: 1px solid rgb(97, 97, 97);
+    padding: 20px;
+    cursor: pointer;
+    border-top: 1px solid rgb(97, 97, 97);
+}
+.panelframe{
+    display: flex;
+}
+.menu{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tourimage{
+    text-decoration: none;
+}
+form{
+    width: 800px;
+    height: 300px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.tours input{
+    width: 800px;
+    padding: 20px;
+    background-color: black;
+    color: white;
+    border-radius: 3px;
+}
+.tours{
+    display: flex;
+    gap: 3px;
+    flex-direction: column;
+}
+.tourstittle{
+    display: flex;
+    gap: 5px;
+}
+.tours button{
+    margin-top: 10px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
+.transportselector{
+    width: 800px;
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+    color: white;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.transportselector a{
+
+    padding: 20px;
+    border: 1px solid black;
+    width: 30%;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.5s;
+
 }
