@@ -3,7 +3,7 @@ import React from 'react'
 export default function Header() {
   return (
     <div className="header">
-       <img className='backgroundimage' width={1920} src="./Background.png" alt="" />
+       <img className='backgroundimage' width={1920} src="./public/Background.png" alt="" />
       <div className="headerframe">
 
         <div className="leftsideheader">
