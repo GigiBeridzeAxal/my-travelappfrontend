@@ -100,8 +100,8 @@ export default function Tours() {
          <div className="tourstittle"><img width={30} src="transport.png" alt="" /><div className="text">აირჩიე ტრანსპორტი</div></div>
         <div className="transportselector">
             {transport == 'air' ?             <a onClick={(e) => settransport('air')} className="airplane bg-emerald-100"><img width={100} src="Airplane.png" alt="" /></a> :             <a onClick={(e) => settransport('air')} className="airplane"><img width={100} src="Airplane.png" alt="" /></a>}
-            {transport == 'car' ?                      <a onClick={(e) => settransport('car')} className="airplane bg-emerald-100 "><img width={100} src="Car.png" alt="" /></a> :                       <a onClick={(e) => settransport('car')} className="airplane "><img width={100} src="Car.png" alt="" /></a>}
-            {transport == 'railcar' ?                        <a onClick={(e) => settransport('railcar')} className="airplane bg-emerald-100"><img width={100} src="Railcar.png" alt="" /></a> :                        <a onClick={(e) => settransport('railcar')} className="airplane"><img width={100} src="Railcar.png" alt="" /></a>}
+            {transport == 'cargray' ?                      <a onClick={(e) => settransport('car')} className="airplane bg-emerald-100 "><img width={100} src="Car.png" alt="" /></a> :                       <a onClick={(e) => settransport('car')} className="airplane "><img width={100} src="Car.png" alt="" /></a>}
+            {transport == 'railcargray' ?                        <a onClick={(e) => settransport('railcar')} className="airplane bg-emerald-100"><img width={100} src="Railcar.png" alt="" /></a> :                        <a onClick={(e) => settransport('railcar')} className="airplane"><img width={100} src="Railcar.png" alt="" /></a>}
 
  
 
