@@ -13,6 +13,7 @@ export default function Home() {
 
        <Search></Search>
        <Whatweoffer></Whatweoffer>
+       <br /><br />
        <Travel></Travel>
     </>
 
