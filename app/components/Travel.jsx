@@ -65,7 +65,7 @@ export default function Travel() {
 
 
 
-<div className="traveltittle">იმოგზაურე ამერიკის მასშტაბით</div>
+<div className="traveltittle">იმოგზაურე ამერიკის მასშტაaiბით</div>
 
   <div className="travellist">
       {traveldata.filter(data => {return data.category.includes('america')}).map(data => {return( <div className="traveldata ">
