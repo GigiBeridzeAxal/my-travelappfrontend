@@ -24,10 +24,10 @@ export default function Whatweoffer() {
                </div>
              
                  </div>
-                 <div className="offerimage"><img width={600} src="windowview.png" alt="" /></div>
+                 <div className="offerimage"><img width={600} src="windowview.PNG" alt="" /></div>
           </div>
           <div className="safe  flex items-center justify-around">
-          <div className="offerimage"><img width={600} src="safeplane.png" alt="" /></div>
+          <div className="offerimage"><img width={600} src="safeplane.PNG" alt="" /></div>
             <div className="offertext ">
                <div className="weoffertext text-orange-600">უსაფრთხოება</div>
               <div className="maintext text-gray-700">ჩვენი ტურები უსაფრთხოებისა და კომფორტის გარანტიაა. გამოცდილი გიდები, კარგად დაგეგმილი მარშრუტები და თანამედროვე სატრანსპორტო საშუალებები უზრუნველყოფენ უსაფრთხო მოგზაურობას. თითოეული ტურის განმავლობაში ყურადღებას ვაქცევთ დეტალებს, რომ თქვენმა გამოცდილებამ იყოს სასიამოვნო და უსაფრთხო. თქვენი უსაფრთხოება ჩვენი პრიორიტეტია.</div>
@@ -51,7 +51,7 @@ export default function Whatweoffer() {
               
              
                  </div>
-    <div className="offerimage"><img width={600} src="safeplane.png" alt="" /></div>
+    <div className="offerimage"><img width={600} src="safeplane.PNG" alt="" /></div>
           </div>
 
 
