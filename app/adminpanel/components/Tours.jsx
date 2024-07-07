@@ -11,34 +11,34 @@ export default function Tours() {
     const [location , setlocation] = useState()
     const [transport , settransport] = useState('air')
     const [category , setcategory] = useState('europe')
+    const [base64 , setbase64] = useState()
 
 
     const datasend = async() => {
 
-        const hashed = await bcrypt.hash(process.env.NEXT_PUBLIC_SECRETKEY , 10)
-        console.log(hashed)
+
+
 
            
         if(image !== undefined || price !== undefined ||tourtime !== undefined ||rating !== undefined ||location !== undefined){
- const senddata = await axios.post(process.env.NEXT_PUBLIC_BACKEND , {
-    
-    Secure:hashed,
-    image:image,
-    price:price,
-    tourtime:tourtime,
-    transport:transport,
-    hotelstar:rating,
-    category:category,
-    location:location
 
+        const hashed = await bcrypt.hash(process.env.NEXT_PUBLIC_SECRETKEY , 10)
+          const formData = new FormData()
 
- })
+          formData.set('file', image)
+          formData.set('price' , price)
+          formData.set('tourtime' , tourtime)
+          formData.set('transport' , transport)
+          formData.set('hotelstar' , rating)
+          formData.set('category' , category)
+          formData.set('location' , location)
+          formData.set('Secure' , hashed)
 
-            if(senddata){
-                console.log("Sended")
-            }
-
-
+          const response = await axios.post('/api/upload', formData ,{
+              headers: {
+                'Content-Type': 'multipart/form-data',
+              },
+            });
 
 
         }
@@ -49,25 +49,26 @@ export default function Tours() {
 
 
 
-    const fileupload = (e) => {
-        const image = e.target.files[0]
+    const fileupload = async(e) => {
+        const hashed = await bcrypt.hash(process.env.NEXT_PUBLIC_SECRETKEY , 10)
+        setimage(e.target.files?.[0])
         const reader = new FileReader()
 
         reader.onloadend =() => {
-            setimage(reader.result)
-
+          setbase64(reader.result)
 
 
         }
-        reader.readAsDataURL(image)
-
+        reader.readAsDataURL(e.target.files[0])
+       
+       
     }
   return (
     <div className="tours">
 
         <form onClick={() => document.querySelector('.tourimage').click()} action="">
-            {image === undefined ? <><div className="plus"><img width={70} src="cloud.png" alt="" /></div>
-            <div className="tittleforupload">Upload Your Image</div></>  : <img width={300} src={image} alt="" />  }
+            {base64 === undefined ? <><div className="plus"><img width={70} src="cloud.png" alt="" /></div>
+            <div className="tittleforupload">Upload Your Image</div></>  : <img width={300} src={base64} alt="" />  }
 
 
 
@@ -117,6 +118,7 @@ export default function Tours() {
         <button onClick={() => datasend()} class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
   დაამატეთ ტური
 </button>
+
         
 
     </div>
